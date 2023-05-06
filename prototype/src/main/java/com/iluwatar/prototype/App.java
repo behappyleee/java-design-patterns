@@ -39,6 +39,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class App {
 
+  // Prototype Patter
+  // 프로토 타입 패턴은
+
+
+
+
   /**
    * Program entry point.
    *

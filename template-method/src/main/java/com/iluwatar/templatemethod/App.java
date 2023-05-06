@@ -33,15 +33,23 @@ package com.iluwatar.templatemethod;
  */
 public class App {
 
+    // Template Method Pattern
+    // 템플릿 메서드 패턴은 특정 작업을 처리하는 일부분을 서브 클래스로 캡슐화하여 전체적인 구조는 바뀌지 않으면서
+    // 특정 단계에서 수행하는 내용을 바꾸는 패턴
+    // 템플릿 메서드 패턴은 전체적으로 동일하면서 부분 적으로는 다른 구문으로 구성된 메서드의 코드 중복을 최소화 할 때 사용
   /**
    * Program entry point.
    *
    * @param args command line args
    */
   public static void main(String[] args) {
+    // Template Method Pattern - Template Method Pattern 은 특정 작업을 처리하는 일 부분을 서브 클래스로 캡슐화를 함
     var thief = new HalflingThief(new HitAndRunMethod());
-    thief.steal();
-    thief.changeMethod(new SubtleMethod());
+    // 해당 Method 에서 steal 수행 시 해당 메서드 안에서 confuseTarget(target);
+    // stealTheItem(target); 같이 실행이 됨
+    thief.steal();    // 기존 old goblin woman. return 이 되어야 정상임
+
+    thief.changeMethod(new SubtleMethod()); // 객체가 SubtleMethod() 로 바뀌게 됨
     thief.steal();
   }
 }

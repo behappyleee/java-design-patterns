@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class HitAndRunMethod extends StealingMethod {
-
+  // 해당 메서드들을 캡슐화를 진행함
   @Override
   protected String pickTarget() {
     return "old goblin woman";
