@@ -33,6 +33,9 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public final class App {
+  // Callback pattern 은 함수형 함수 에서 유용한 Pattern 이다.
+
+
 
   private App() {
   }
@@ -43,5 +46,8 @@ public final class App {
   public static void main(final String[] args) {
     var task = new SimpleTask();
     task.executeWith(() -> LOGGER.info("I'm done now."));
+
+    SimpleTaskTest stt = new SimpleTaskTest();
+    stt.executeWith(() -> LOGGER.info("THIS IS MY SIMPLE TASK TEST METHOD CHECK"));
   }
 }

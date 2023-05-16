@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class SubtleMethod extends StealingMethod {
-
+  // 헤당 메서드들을 캡슐화를 진행함 !!
   @Override
   protected String pickTarget() {
     return "shop keeper";
